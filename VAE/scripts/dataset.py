@@ -5,7 +5,14 @@ transform = transforms.Compose(
     [
         transforms.ToTensor(),
         transforms.Normalize((0), (1,)),
-        # transforms.RandomHorizontalFlip(p=0.5),
-        # transforms.RandomVerticalFlip(p=0.5),
+        transforms.RandomHorizontalFlip(p=0.5),
+        transforms.RandomVerticalFlip(p=0.5),
+    ]
+)
+# Load Data
+test_transform = transforms.Compose(
+    [
+        transforms.ToTensor(),
+        transforms.Normalize((0), (1,)),
     ]
 )

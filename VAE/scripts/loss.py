@@ -11,6 +11,6 @@ def elbo_loss(recon_x, x, mu, log_var, weight=1):
 
     KLD = -0.5 * torch.sum(1 + log_var - mu.pow(2) - log_var.exp())
 
-    print(BCE, KLD)
+    # print(BCE, KLD)
 
     return BCE * weight + KLD

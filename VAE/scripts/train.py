@@ -30,7 +30,7 @@ def initialize_optimizer(config, model):
 def train(model, optimizer, device):
 
     # Run training
-    num_epochs = 5
+    num_epochs = 10
     for epoch in range(1, num_epochs + 1):
         model = train_one_epoch(model, optimizer, elbo_loss, device, epoch)
 
